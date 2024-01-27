@@ -5,6 +5,7 @@ import logging
 
 TCID_LENGTH = 11
 
+
 def validator(tc_id: str) -> bool:
 
     if len(tc_id) != TCID_LENGTH:
@@ -38,6 +39,7 @@ def get_tc_id():
     args = parser.parse_args()
 
     return args.tc_id
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
