@@ -16,17 +16,16 @@ def validator(tc_id: str) -> bool:
 
     id_arr = [int(d) for d in list(tc_id)]
 
-    d9 = 7 * (sum(id_arr[:-2][0::2])) - sum(id_arr[:-2][1::2])
-    d9 = d9 % 10
+    d9 = (7 * (sum(id_arr[:-2][0::2])) - sum(id_arr[:-2][1::2])) % 10
 
     if d9 != id_arr[9]:
-        logging.warning("Not pass digit 10 validation.")
+        logging.warning("Not pass 10th digit validation.")
         return False
 
     d10 = sum(id_arr[:-1]) % 10
 
     if d10 != id_arr[10]:
-        logging.warning("Not pass digit 11 validation.")
+        logging.warning("Not pass 11th digit validation.")
         return False
 
     return True
