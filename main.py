@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import logging
 
 TCID_LENGTH = 11
@@ -31,12 +32,19 @@ def validator(tc_id: str) -> bool:
     return True
 
 
+def get_tc_id():
+    parser = argparse.ArgumentParser(description="")
+    parser.add_argument("tc_id", type=str, help='Set TC id')
+    args = parser.parse_args()
+
+    return args.tc_id
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     logging.info("TC id validator")
 
-    tc_id = "10000000146"
+    tc_id = get_tc_id()
 
     result = validator(tc_id)
 
