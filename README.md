@@ -14,5 +14,5 @@ Digit 10 == (7 * (Digit 1 + Digit 3 +  Digit 5 +  Digit 7 +  Digit 9) - (Digit 2
 Digit 11 == sum(Digit 1, Digit 2, ... , Digit 9, Digit 10) % 10
 ```
 
-
-Reference: https://www.frmtr.com/garip-olaylar/4181793-tc-kimlik-nolar-neden-hep-cift-rakam-ile-biter.html
+References: 
+- [frmtr](https://www.frmtr.com/garip-olaylar/4181793-tc-kimlik-nolar-neden-hep-cift-rakam-ile-biter.html)
